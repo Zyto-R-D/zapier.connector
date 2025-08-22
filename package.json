@@ -1,17 +1,12 @@
 {
   "name": "@zyto/zapier-connector",
   "version": "0.1.0",
-  "private": true,
-  "description": "Zapier app for Zyto: start runs from Zapier.",
-  "engines": { "node": ">=18" },
-  "scripts": {
-    "test": "zapier test",
-    "build": "echo \"JS-only app; nothing to build\""
-  },
-  "dependencies": {
-    "zapier-platform-core": "^15.5.0"
-  },
-  "devDependencies": {
-    "zapier-platform-cli": "^15.5.1"
-  }
-}
+  "type": "module",
+  "description": "Zapier invocation wrapper with retries and telemetry.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+  
